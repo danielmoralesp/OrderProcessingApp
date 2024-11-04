@@ -1,0 +1,12 @@
+<h1>Order #<%= @order.id %></h1>
+
+<p>Status: <%= @order.status %></p>
+
+<p>
+  <%= button_to 'Process', process_order_order_path(@order), method: :patch %>
+  <%= button_to 'Complete', complete_order_order_path(@order), method: :patch %>
+  <%= button_to 'Fail', fail_order_order_path(@order), method: :patch %>
+  <%= button_to 'Cancel', cancel_order_order_path(@order), method: :patch %>
+</p>
+
+<%= link_to 'Back to Orders', orders_path %>
